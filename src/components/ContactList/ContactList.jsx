@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { StyledList, StyledButton } from './ContactList.styled';
 
 export const ContactList = ({ items, onDelete }) => {
@@ -6,7 +5,7 @@ export const ContactList = ({ items, onDelete }) => {
     <StyledList>
       {items.map(item => {
         return (
-          <li key={nanoid()}>
+          <li key={item.id}>
             {item.name}: {item.number}{' '}
             <StyledButton type="button" onClick={() => onDelete(item.id)}>
               Delete
